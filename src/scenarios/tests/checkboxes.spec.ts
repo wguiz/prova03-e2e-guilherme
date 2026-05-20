@@ -5,11 +5,12 @@ test('checkbox can be selected and unselected', async ({ page }) => {
 
   const checkboxes = page.locator('#checkboxes input');
 
+  
   await expect(checkboxes.first()).not.toBeChecked();
-
 
   await checkboxes.first().check();
   await expect(checkboxes.first()).toBeChecked();
+
 
   await checkboxes.first().uncheck();
   await expect(checkboxes.first()).not.toBeChecked();
