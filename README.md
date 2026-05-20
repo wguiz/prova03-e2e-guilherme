@@ -1,40 +1,39 @@
-# API test automation with Jest and PactumJS
+# Playwright E2E
 
-> Simple integration between JestJS and PactumJS.
+## GitHub Actions + SonarCloud
 
-## GitHub Actions
+[![Build and Tests](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml)
 
-[![Node.js CI](https://github.com/ugioni/integration-tests-jest/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/integration-tests-jest/actions/workflows/node.js.yml)
+</br>
 
-## SonarCloud
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_playwright-e2e&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_playwright-e2e)
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_integration-tests-jest&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_integration-tests-jest)
+## Getting Started
 
-# Getting Started
+In order to execute this project you must follow the steps below:
 
-### Pactum docs:
- - [PactumJS](https://pactumjs.github.io/)
+1. Install [Node JS](https://nodejs.org/) (version >= 22.x)
+1. Run `npm i --save-dev` to install all the project dependencies
+1. Run `npx playwright install` to install the browsers used by Playwright
+1. Run `npm run ci` to execute the entire test suite
+1. Run `npm run show-report` to visualize the reports
 
-### Prerequisites:
- - NodeJS `v22`
+All execution artifacts can be found in `./artifacts`, if you want to remove these files run `npm run clean`.
 
-### How to run?
+## Using ZeroStep AI
+</br>
 
-Inside of the project folder run:
+To use the AI ​​feature with ZeroStep, you must create the `zerostep.config.json` file in the root of the project and add your ZeroStep token.
 
- 1. `npm install --save-dev`
- 1. `npm run ci`
-
-After that you should see a `./output` folder with some `HTML` reports.
-
-### Docs to Api under tests: 
- - [Dummyjson](https://dummyjson.com/docs)
- - [Gorest](https://gorest.co.in/)
- - [Toolshop API](https://api.practicesoftwaretesting.com/api/documentation)
- - [Deck of Cards](https://deckofcardsapi.com/)
- - [JSON placeholder](https://jsonplaceholder.typicode.com/)
- - [http bin](http://httpbin.org/)
- - [rick and morty api](https://rickandmortyapi.com/documentation/#rest)
- - [Petstore](https://petstore.swagger.io/#/) 
- - [ServeRest](https://serverest.dev/#/)
- - [ServeRest - Datadog](https://p.datadoghq.eu/sb/421fcfee-35ec-11ee-b87f-da7ad0900005-2aaf85264a89d11b7001bcab452a266e?refresh_mode=sliding&theme=light&tpl_var_env%5B0%5D=serverest.dev&from_ts=1699931511294&to_ts=1699932411294&live=true)
+## Project Structure
+</br>
+<ul>
+    <li>Scenarios: Test scenario mapping</li>
+    <li>Support: Project structure files
+        <ul>
+            <li>Elements: Mapping the elements of each screen</li>
+            <li>Fixtures: Data configuration files</li>
+            <li>Pages: Logic used to perform actions in tests</li>
+        </ul>
+    </li>
+</ul>
